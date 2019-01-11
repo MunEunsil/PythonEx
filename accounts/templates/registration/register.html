@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class = "row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 panel panel-default">
+
+            <div class="alert alert-info">please enter your account information.</div>
+                <form action=""method="POST">
+                      {{form.as_p}}
+                      {% csrf_token %}
+                      <input type="submit" calue="Register" class="btn btn-success">
+                </form>
+        </div>
+        <div class="col-md-2"></div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load tagging_tags %}
+    {% tag_cloud_for_model photo.Photo as tags %}
+
+    {% for tag in tags %}
+
+    <a href="{% url 'photo:tagged_photo_list' tag.name%}">#{{ tag.name }}</a>
+
+    {% endfor %}
+
+{% endblock %}
